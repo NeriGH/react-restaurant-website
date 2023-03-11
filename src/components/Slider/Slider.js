@@ -16,12 +16,12 @@ const textSlides = [
   {
     title: "Le restaurant",
     subtitle: "",
-    text: "La Table de Chantal est un restaurant de cuisine traditionnelle française situé dans la ville de Tourcoing. Depuis son ouverture, La Table de Chantal est rapidement devenu l'un des restaurants les plus appréciés de la région, grâce à sa cuisine de qualité et à son ambiance conviviale. Le menu propose une variété de plats français classiques, avec une touche moderne. Tous les plats sont préparés à partir d'ingrédients frais et locaux, ce qui garantit une expérience culinaire de qualité supérieure. Le chef, Chantal, est passionné par la cuisine et met tout son savoir-faire pour vous offrir une expérience gustative inoubliable.",
+    text: "Découvrez La Table de Chantal, un restaurant de cuisine française traditionnelle à Tourcoing. Savourez des plats classiques avec une touche moderne, préparés à partir d'ingrédients frais et locaux. Le chef passionné met tout son savoir-faire pour vous offrir une expérience gastronomique inoubliable.",
   },
   {
     title: "Notre chef",
     subtitle: "",
-    text: "Le chef de La Table de Chantal est une passionnée de la cuisine française classique. Elle utilise des ingrédients frais et locaux pour créer des plats délicieux qui mettent en valeur les saveurs authentiques de chaque ingrédient. Avec des années d'expérience dans l'industrie de la restauration, le chef est un expert en matière de création de menus créatifs et de qualité supérieure. Son engagement envers l'excellence culinaire se reflète dans chaque plat qu'elle prépare, garantissant ainsi une expérience gastronomique inoubliable pour les clients de La Table de Chantal.",
+    text: "Le chef de La Table de Chantal est un expert en cuisine française classique, passionné par la création de plats délicieux à partir d'ingrédients frais et locaux. Avec des années d'expérience dans l'industrie de la restauration.",
   },
 ];
 
@@ -33,7 +33,7 @@ const Slider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setState(activeIndex + 1);
-    }, 6500);
+    }, 6000);
     return () => clearInterval(interval);
   }, [activeIndex]);
 
