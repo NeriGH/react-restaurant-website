@@ -8,7 +8,7 @@ const Card = ({ name, price, imageUrl }) => {
   return (
     <div key={cardId} className="card">
       <div className="title">{name}</div>
-      <img src={imageUrl} alt={name} />
+      <img src={imageUrl} />
       <div className="price">{price}</div>
     </div>
   );
