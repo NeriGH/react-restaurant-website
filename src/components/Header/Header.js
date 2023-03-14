@@ -1,24 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
+import React from "react";
 import "./Header.css";
 import Dish from "../../pages/Dish/Dish";
 import Drink from "../../pages/Drink/Drink";
 import Contact from "../../pages/Contact/Contact";
 import Home from "../../pages/Home/Home";
-import Slider from "../Slider/Slider";
 
 const Logo = `${process.env.PUBLIC_URL}/assets/images/logo.jpg`;
 
-const Navbar = () => {
-  const [isLinkClicked, setIsLinkClicked] = useState(false);
-
-  const handleLinkClick = (path) => {
-    if (path === "/home") {
-      setIsLinkClicked(false);
-    } else {
-      setIsLinkClicked(true);
-    }
+const Navbar = ({ setLinkClicked }) => {
+  const handleLinkClick = () => {
+    setLinkClicked();
   };
 
   return (
@@ -31,17 +24,17 @@ const Navbar = () => {
         </div>
         <ul className="navbar-links">
           <li className="navbar-link">
-            <Link to="/dish" onClick={() => handleLinkClick("/dish")}>
+            <Link to="/dish" onClick={handleLinkClick}>
               Carte
             </Link>
           </li>
           <li className="navbar-link">
-            <Link to="/drink" onClick={() => handleLinkClick("/drink")}>
+            <Link to="/drink" onClick={handleLinkClick}>
               Boissons
             </Link>
           </li>
           <li className="navbar-link cta">
-            <Link to="/contact" onClick={() => handleLinkClick("/contact")}>
+            <Link to="/contact" onClick={handleLinkClick}>
               Contact
             </Link>
           </li>
@@ -53,7 +46,6 @@ const Navbar = () => {
         <Route path="/drink" element={<Drink />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      {(!isLinkClicked || window.location.pathname === "/home") && <Slider />}
     </Router>
   );
 };
