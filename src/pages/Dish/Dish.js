@@ -48,7 +48,7 @@ const dishes = [
   },
   {
     id: uuidv4(),
-    name: "Spaghetti Carbonara",
+    name: "Spaghetti",
     category: "main course",
     price: "14.99€",
     imageUrl: "https://source.unsplash.com/700x700/?carbonara",

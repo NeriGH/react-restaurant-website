@@ -10,7 +10,7 @@ const images = [
 const textSlides = [
   {
     title: "La Table de Chantal",
-    subtitle: "Vous souhaites la bienvenue.",
+    subtitle: "Vous souhaite la bienvenue.",
     text: "",
   },
   {
